@@ -25,6 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: white;
 }
 
 input, button, textarea, select {
@@ -45,4 +46,63 @@ img {
 a {
   color: white;
   text-decoration: none;
+}
+
+fieldset {
+  border: none;
+}
+
+form {
+  background-color: #15172b;
+  border-radius: 20px;
+  box-sizing: border-box;
+  /* height: 500px; */
+  padding: 20px;
+  width: 320px;
+}
+
+input {
+  margin: 5px 0px;
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  color: #eee;
+  outline: none;
+  padding: 4px 20px 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  
+}
+
+input[type="checkbox"] {
+margin: 10px 0px;
+width: 40px;
+transform: scale(2);
+
+}
+#readit {
+  display: inline-block
+}
+
+#create-book-btn {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.863);
+  border-radius: 5px;
+  border: 1px solid rgb(22, 41, 212);
+  padding: 10px;
+  color: rgb(53, 192, 247);
+  font-weight: bold;
+  
+  
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.library-container {
+  
 }
