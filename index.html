@@ -1,51 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./js/script.js" defer></script>
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-  <script src="./js/script.js" defer></script>
-  <title>Document</title>
-</head>
+  <body>
+    <button data-modal-target="#modal" class="class">Open Modal</button>
+    <div class="modal" id="modal">
+      <fieldset>
+        <button data-close-button class="close-button">&times;</button>
+        <form action="">
+          <legend>Enter the new book info:</legend>
+          <div>
+            <label for="book-name">Title</label>
+            <input
+              type="text"
+              id="book-name-field"
+              name="book-name"
+              required
+              minlength="2"
+              maxlength="40"
+            />
+          </div>
 
-<body>
-  <fieldset>
-    <form action="">
-      <legend>Enter the new book info: </legend>
-      <div>
-        <label for="book-name">Book name</label>
-        <input type="text" id="book-name-field" name="book-name" required minlength="2" maxlength="40">
-      </div>
+          <div>
+            <label for="author-name">Author name</label>
+            <input
+              type="text"
+              id="author-name-field"
+              name="author-name"
+              required
+              minlength="2"
+              maxlength="40"
+            />
+          </div>
+          <div>
+            <label for="rating">Rating</label>
+            <input
+              type="text"
+              id="rating-field"
+              name="rating"
+              required
+              minlength="1"
+              maxlength="40"
+            />
+          </div>
 
-      <div>
-        <label for="author-name">Author name</label>
-        <input type="text" id="author-name-field" name="author-name" required minlength="2" maxlength="40">
-      </div>
-      <div>
-        <label for="rating">rating</label>
-        <input type="text" id="rating-field" name="rating" required minlength="1" maxlength="40">
-      </div>
+          <div>
+            <input type="checkbox" id="readit" name="readit" />
+            <label for="readit">I have read it</label>
+          </div>
 
-      <div>
-        <input type="checkbox" id="readit" name="readit" >
-        <label for="readit">I have read it</label>
-      </div>
+          <div class="button-container">
+            <button type="submit" id="create-book-btn">
+              Create new book entry
+            </button>
+          </div>
+        </form>
+      </fieldset>
+    </div>
+<div id="overlay"></div>
 
-      <div class="button-container">
-        <button type="submit" id="create-book-btn" >Create new book entry</button>
-        
-      </div>
-  </fieldset>
-  </form>
-
-  <div class="library-container">
-    
-  </div>
-</body>
-
+    <!-- <div class="library-container">
+    <h2>Title:</h2> <h3 class="title">test</h3>
+    <h2>Author:</h2> <h3 class="title">test</h3>
+    <h2>Rating:</h2> <h3 class="title">test</h3>
+    <h3>I have read it ✓✓</h3> 
+  </div> -->
+  </body>
 </html>
