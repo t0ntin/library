@@ -1,102 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <script src="./js/script.js" defer></script>
-    <title>Library</title>
-  </head>
 
-  <body>
-    <button data-modal-target="#modal" class="class">Open Modal</button>
-    <div class="modal" id="modal">
-      <fieldset>
-        <button data-close-button class="close-button">&times;</button>
-        <form action="">
-          <legend>Enter the new book info:</legend>
-          <div>
-            <label for="book-name">Title:</label>
-            <input
-              type="text"
-              id="book-name-field"
-              name="book-name"
-              required
-              minlength="2"
-              maxlength="40"
-            />
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+  <script src="./js/script.js" defer></script>
+  <title>Library</title>
+</head>
 
-          <div>
-            <label for="author-name">Author name:</label>
-            <input
-              type="text"
-              id="author-name-field"
-              name="author-name"
-              required
-              minlength="2"
-              maxlength="40"
-            />
-          </div>
-          <div>
-            <label for="pages">Number of Pages:</label>
-            <input
-              type="number"
-              id="pages-field"
-              name="pages"
-              required
-              minlength="2"
-              maxlength="40"
-            />
-          </div>
+<body>
+  <p class="page-title">My Library</p>
+  <p class="add-book">Add book</p>
+  <button data-modal-target="#modal" class="open-modal-btn">+</button>
+  <div class="modal" id="modal">
+    <fieldset>
+      <button data-close-button class="close-button">&times;</button>
+      <form action="">
+        <legend>Enter the new book info:</legend>
+        <div>
+          <label for="book-name">Title:</label>
+          <input type="text" id="book-name-field" name="book-name" required minlength="2" maxlength="40" />
+        </div>
 
-          <div>
-            <input type="checkbox" id="readit" name="readit" />
-            <label for="readit">I have read it</label>
-          </div>
+        <div>
+          <label for="author-name">Author name:</label>
+          <input type="text" id="author-name-field" name="author-name" required minlength="2" maxlength="40" />
+        </div>
+        <div>
+          <label for="pages">Number of Pages:</label>
+          <input type="number" id="pages-field" name="pages" required minlength="2" maxlength="4" />
+        </div>
 
-          <div class="button-container">
-            <button type="submit" id="create-book-btn">
-              Create new book entry
-            </button>
-          </div>
-        </form>
-      </fieldset>
-    </div>
-<div id="overlay"></div>
+        <div>
+          <input type="checkbox" id="readit" name="readit" />
+          <label for="readit">I have read it</label>
+        </div>
+        <div id="error-msg-container"> </div>
+        <div class="button-container">
+          <button type="submit" id="create-book-btn">
+            Create book entry
+          </button>
+        </div>
+      </form>
+    </fieldset>
+  </div>
+  <div id="overlay"></div>
 
-<table border="1">
-  <colgroup>
-    <col span="1">
-    <col style="border: 1px solid white;">
-  </colgroup>
-  <thead>
-    <tr>
-      <th>Number</th>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Pages</th>
-      <th>Read it??????</th>
-      <th>Delete Book</th>
-    </tr>
+  <table border="1">
+    <colgroup>
+      <col span="1">
+      <col style="border: 1px solid white;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Pages</th>
+        <th>Have you read it?</th>
+        <th>Delete Book</th>
+      </tr>
     <tbody id="tbodyEl">
 
     </tbody>
 
-  </thead>
+    </thead>
 
 
-</table>
-   <!-- <caption>A table where you can organize basic informatin about books you have read.</caption> -->
+  </table>
+  <!-- <caption>A table where you can organize basic informatin about books you have read.</caption> -->
 
-    
-  </body>
+
+</body>
+
 </html>
- 
