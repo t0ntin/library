@@ -57,20 +57,23 @@ a {
   margin: 20px;;
   font-size: 2rem;
   font-weight: bold;
-  color: rgb(224, 248, 4);
+  color: rgb(221, 15, 0);
   letter-spacing: 3px;
 }
 
-.add-book {
+.add-book-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   position: fixed;
-  top: 86%;
-  left: 68%;
+  top: 80%;
+  left: 60%;
 }
 
 .open-modal-btn {
-  position: fixed;
+  /* position: fixed;
   top: 80%;
-  left: 80%;
+  left: 80%; */
   background-color: rgba(0, 0, 0, 0.863);
   border-radius: 50%;
   border: none;
@@ -219,7 +222,7 @@ input[type="checkbox"] {
   display: inline-block;
   width: 24px;
   height: 24px;
-  background-image: url(/images/delete.svg#icon-path-red);
+  background-image: url(../images/delete.svg#icon-path-red);
 
   text-align: center;
   vertical-align: middle;
@@ -290,5 +293,5 @@ table td:nth-child(5) {
 }
 
 table td:nth-child(6) {
-  width: 106px;
+  width: 130px;
 }
